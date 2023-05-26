@@ -1,33 +1,13 @@
-*:focus {
-    outline: 0px none transparent;
-}
-
-html,
 body {
-    height: 100%;
-}
-
-body {
-    background-color: #f8f3ef;
+    background-color: var(--surface-color);
     color: #351d19;
     font-family: 'Caveat', cursive;
 }
 
 h1 {
-    margin: 0;
     text-align: center;
     align-self: center;
-    font-weight: normal;
     font-size: 40px;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
 }
 
 button,
@@ -39,17 +19,12 @@ button,
     justify-content: center;
 }
 
-.button-primary {
-    background-color: #dacfd5;
-    font-family: inherit;
+.button-icon {
+    background-color: var(--primary-color);
     height: 48px;
     width: 48px;
     border-radius: 50%;
-    grid-column: 2;
-    color: #a68c9a;
-    position: relative;
-    bottom: 24px;
-    border: 2px solid #f8f3ef;
+    color: var(--on-primary-color);
 }
 
 .root {
@@ -58,6 +33,9 @@ button,
     grid-template-rows: 80px 1fr 40px;
     height: 100%;
     grid-gap: 8px 0;
+    overflow-y: hidden;
+    max-width: 320px;
+    margin: 0 auto;
 }
 
 .todo-box {
@@ -113,17 +91,4 @@ input[type="search"] {
 
 input[type="search"]:focus {
     background-color: #d3b5a4;
-}
-
-.input-checkbox-box {
-    display: flex;
-    height: 16px;
-    width: 16px;
-    background-color: #f8f3ef;
-    border-radius: 4px;
-}
-
-.input-checkbox-label input[type="checkbox"] {
-    margin: 0;
-    display: none;
 }

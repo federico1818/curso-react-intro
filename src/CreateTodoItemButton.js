@@ -1,6 +1,6 @@
 function CreateTodoItemButton() {
     return (
-        <button className="button button-primary">
+        <button className="button button-icon">
             <span className="material-symbols-outlined">
                 add
             </span>

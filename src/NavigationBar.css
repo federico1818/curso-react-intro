@@ -1,7 +1,14 @@
 .navigation-bar {
-    background-color: #f0dede;
+    background-color: var(--secondary-color);
     border-radius: 8px;
     display: grid;
     grid-template-columns: 1fr 48px 1fr;
     justify-items: center;
+}
+
+.navigation-bar .button-icon {
+    grid-column: 2;
+    position: relative;
+    bottom: 24px;
+    border: 2px solid var(--surface-color);
 }
