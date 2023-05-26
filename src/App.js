@@ -1,25 +1,30 @@
-import logo from './platzi.webp';
-import './App.css';
+import './App.css'
+import { TodoList }   from './TodoList'
+import { TodoItem }   from './TodoItem'
+import { NavigationBar } from './NavigationBar'
+
+const todos = [
+    { text: 'tarea 1', completed: false },
+    { text: 'tarea 2', completed: true },
+    { text: 'tarea 3', completed: false },
+    { text: 'tarea 4', completed: false }
+]
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edita el archivo <code>src/App.js</code> y guarda para recargar.
-        </p>
-        <a
-          className="App-link"
-          href="https://platzi.com/reactjs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <h1>To do list</h1>
+            <TodoList>
+                { todos.map(todo => (
+                    <TodoItem
+                        key={ todo.text }
+                        text={ todo.text }
+                    />
+                )) }
+            </TodoList>
+            <NavigationBar />
+        </>
+    );
 }
 
 export default App;

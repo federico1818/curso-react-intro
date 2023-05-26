@@ -1,0 +1,7 @@
+.navigation-bar {
+    background-color: #f0dede;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    justify-items: center;
+}
