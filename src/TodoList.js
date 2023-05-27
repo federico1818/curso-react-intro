@@ -2,9 +2,10 @@ import React from "react"
 import { TodoSearch } from "./TodoSearch"
 
 function TodoList({
-    children
+    children,
+    search,
+    setSearch
 }) {
-    const [search, setSearch] = React.useState('')
     return (
         <div className="todo-box">
             <TodoSearch
