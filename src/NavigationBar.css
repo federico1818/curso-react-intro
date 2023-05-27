@@ -14,3 +14,8 @@
     background-color: var(--primary-color);
     color: var(--on-primary-color);
 }
+
+.navigation-bar .button-icon:hover {
+    background-color: var(--primary-dark-color);
+    color: var(--on-primary-dark-color);
+}

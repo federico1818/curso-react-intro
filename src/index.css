@@ -12,6 +12,8 @@
     --surface-color: #f8f3ef;
     --primary-color: #ced5df;
     --on-primary-color: #8495ae;
+    --primary-dark-color: #8495ae;
+    --on-primary-dark-color: var(--surface-color);
     --secondary-color: #e5d4ca;
     --on-secondary-color: #bc9076;
     --secondary-dark-color: #d5baa9;
