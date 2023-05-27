@@ -4,7 +4,7 @@
     grid-template-columns: 16px 1fr 32px;
     grid-gap: 0 8px;
     align-items: center;
-    height: 40px;
+    height: 48px;
 }
 
 .input-checkbox-box {
@@ -13,6 +13,10 @@
     width: 16px;
     background-color: var(--surface-color);
     border-radius: 4px;
+}
+
+.todo-item-text::selection {
+    background-color: var(--secondary-dark-color);
 }
 
 .input-checkbox-label input[type="checkbox"] {
@@ -30,4 +34,8 @@
     width: inherit;
     height: inherit;
     display: flex;
+}
+
+.todo-item .button-icon:hover {
+    background-color: var(--secondary-dark-color);
 }

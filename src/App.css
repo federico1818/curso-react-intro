@@ -24,6 +24,7 @@ h1::selection {
 }
 
 .button-icon {
+    transition: background-color .5s;
     border-radius: 50%; 
 }
 
