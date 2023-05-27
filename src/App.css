@@ -1,6 +1,6 @@
 body {
     background-color: var(--surface-color);
-    color: #351d19;
+    color: var(--text-color);
     font-family: 'Caveat', cursive;
 }
 
@@ -10,9 +10,12 @@ h1 {
     font-size: 40px;
 }
 
-button,
+h1::selection {
+    background-color: var(--text-color);
+    color: var(--surface-color);
+}
+
 .button {
-    border: 0;
     background-color: inherit;
     display: flex;
     align-items: center;
@@ -20,11 +23,17 @@ button,
 }
 
 .button-icon {
-    background-color: var(--primary-color);
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
-    color: var(--on-primary-color);
+    border-radius: 50%; 
+}
+
+.button-icon.lg {
+    height: var(--size-lg);
+    width: var(--size-lg);
+}
+
+.button-icon.xl {
+    height: var(--size-xl);
+    width: var(--size-xl);
 }
 
 .root {
@@ -39,22 +48,12 @@ button,
 }
 
 .todo-box {
-    background-color: #e5d4ca;
+    background-color: var(--secondary-color);
     border-radius: 8px;
     padding: 16px 16px 24px 16px;
     display: grid;
     grid-gap: 16px 0;
     align-self: start;
-}
-
-.todo-item {
-    padding: 4px 0;
-    border-bottom: 1px solid #9c8a80;
-    display: grid;
-    grid-template-columns: 16px 1fr 32px;
-    grid-gap: 0 8px;
-    align-items: center;
-    height: 32px;
 }
 
 .input-label {

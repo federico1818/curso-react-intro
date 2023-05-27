@@ -1,5 +1,5 @@
 .navigation-bar {
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
     border-radius: 8px;
     display: grid;
     grid-template-columns: 1fr 48px 1fr;
@@ -11,4 +11,6 @@
     position: relative;
     bottom: 24px;
     border: 2px solid var(--surface-color);
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
 }

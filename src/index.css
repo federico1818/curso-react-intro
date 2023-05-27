@@ -7,11 +7,19 @@
 }
 
 :root {
+    --text-color: #351d19;
+    --border-color: #9c8a80;
     --surface-color: #f8f3ef;
     --primary-color: #ced5df;
     --on-primary-color: #8495ae;
-    --secondary-color: #dacfd5;
-    --on-secondary-color: #a68c9a;
+    --secondary-color: #e5d4ca;
+    --on-secondary-color: #bc9076;
+    --tertiary-color: #f0dede;
+    --on-tertiary-color: #d09898;
+    --size-sm: 20px;
+    --size-md: 24px;
+    --size-lg: 40px;
+    --size-xl: 48px;
 }
 
 html,
@@ -33,4 +41,10 @@ ul {
 
 li {
     list-style: none;
+}
+
+.button {
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
