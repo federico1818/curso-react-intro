@@ -1,16 +1,16 @@
 import './App.css'
+import React from 'react'
 import { TodoList }   from './TodoList'
 import { TodoItem }   from './TodoItem'
 import { NavigationBar } from './NavigationBar'
 
-const todos = [
-    { text: 'tarea 1', completed: false },
-    { text: 'tarea 2', completed: true },
-    { text: 'tarea 3', completed: false },
-    { text: 'tarea 4', completed: false }
-]
-
 function App() {
+    const [todos, setTodos] = React.useState([
+        { text: 'tarea 01', completed: false },
+        { text: 'tarea 02', completed: true },
+        { text: 'tarea 03', completed: false },
+        { text: 'tarea 04', completed: false }
+    ])
     return (
         <>
             <h1>To do list</h1>

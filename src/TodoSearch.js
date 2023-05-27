@@ -1,10 +1,25 @@
-function TodoSearch() {
+import './TodoSearch.css'
+
+function TodoSearch({
+    search,
+    setSearch
+}) {
+
+    function onChange(event) {
+        setSearch(event.target.value)
+    }
+
     return (
-        <label className="input-label">
+        <label className="input-search-label">
             <span className="material-symbols-outlined">
                 search
             </span>
-            <input type="search" />
+            <input
+                className="input"
+                type="text"
+                value={ search }
+                onChange={ onChange }
+            />
         </label>
     )
 }

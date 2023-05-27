@@ -16,6 +16,7 @@ h1::selection {
 }
 
 .button {
+    cursor: pointer;
     background-color: inherit;
     display: flex;
     align-items: center;
@@ -56,38 +57,6 @@ h1::selection {
     align-self: start;
 }
 
-.input-label {
-    display: grid;
-    grid-template-columns: 32px 1fr;
-    align-items: center;
-    height: 32px;
-}
-
 .material-symbols-outlined {
     font-size: 18px;
-}
-
-.input-label .material-symbols-outlined {
-    grid-row: 1;
-    grid-column: 1;
-    justify-self: end;
-    z-index: 0;
-}
-
-.input-label input {
-    grid-row: 1;
-    grid-column: 1 / 3;
-}
-
-input[type="search"] {
-    border: 1px solid #d3b5a4;
-    border-radius: 24px;
-    height: 100%;
-    padding: 0 16px 0 40px;
-    background-color: transparent;
-    font-family: inherit;
-}
-
-input[type="search"]:focus {
-    background-color: #d3b5a4;
 }

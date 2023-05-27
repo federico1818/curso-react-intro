@@ -1,11 +1,18 @@
+import React from "react"
 import { TodoSearch } from "./TodoSearch"
 
-function TodoList(props) {
+function TodoList({
+    children
+}) {
+    const [search, setSearch] = React.useState('')
     return (
         <div className="todo-box">
-            <TodoSearch />
+            <TodoSearch
+                search={ search }
+                setSearch={ setSearch } 
+            />
             <ul className="todo-list">
-                { props.children }
+                { children }
             </ul>
         </div>
     )
