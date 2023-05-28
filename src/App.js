@@ -15,6 +15,12 @@ function App() {
     const filtered = todos.filter(todo => {
         return todo.text.toLowerCase().includes(search.toLowerCase())
     })
+    const toggleCompletedTodo = (text) => {
+        const todosCopy = [...todos]
+        const index = todosCopy.findIndex(todo => todo.text == text )
+        todosCopy[index].completed = !todosCopy[index].completed
+        setTodos(todosCopy)
+    }
     return (
         <>
             <h1>To do list</h1>
@@ -25,8 +31,10 @@ function App() {
                 { filtered.map(todo => (
                     <TodoItem
                         key={ todo.text }
-                        text={ todo.text }
-                        completed={ todo.completed }
+                        todo={ todo }
+                        onCompletedChange={ () => { 
+                            toggleCompletedTodo(todo.text) 
+                        }}
                     />
                 )) }
             </TodoList>

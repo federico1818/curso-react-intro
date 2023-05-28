@@ -1,13 +1,16 @@
 import './TodoItem.css'
 
-function TodoItem(props) {
+function TodoItem({ todo, onCompletedChange }) {
     return (
-        <li className={`todo-item ${ props.completed? 'completed': '' }`}>
+        <li className={`todo-item ${ todo.completed? 'completed': '' }`}>
             <label className="input-checkbox-label">
-                <input type="checkbox" />
+                <input 
+                    type="checkbox"
+                    onChange={ onCompletedChange }
+                />
                 <span className="input-checkbox-box"></span>
             </label>
-            <span className="todo-item-text">{ props.text }</span>
+            <span className="todo-item-text">{ todo.text }</span>
             <button className="button button-icon lg">
                 <span className="material-symbols-outlined">
                     delete

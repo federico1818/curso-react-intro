@@ -10,7 +10,7 @@ function TodoList({
         <div className="todo-box">
             <TodoSearch
                 search={ search }
-                setSearch={ setSearch } 
+                setSearch={ setSearch }
             />
             <ul className="todo-list">
                 { children }

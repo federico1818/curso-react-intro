@@ -19,6 +19,10 @@
     background-color: var(--secondary-dark-color);
 }
 
+.input-checkbox-label {
+    cursor: pointer;
+}
+
 .input-checkbox-label input[type="checkbox"] {
     margin: 0;
     display: none;
