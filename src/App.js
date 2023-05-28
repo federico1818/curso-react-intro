@@ -1,7 +1,7 @@
 import './App.css'
 import React from 'react'
-import { TodoList }   from './TodoList'
-import { TodoItem }   from './TodoItem'
+import { TodoList } from './TodoList'
+import { TodoItem } from './TodoItem'
 import { NavigationBar } from './NavigationBar'
 
 function App() {
@@ -21,6 +21,12 @@ function App() {
         todosCopy[index].completed = !todosCopy[index].completed
         setTodos(todosCopy)
     }
+    const onDelete = (text) => {
+        const todosCopy = [...todos]
+        const index = todosCopy.findIndex(todo => todo.text == text )
+        todosCopy.splice(index, 1)
+        setTodos(todosCopy)
+    }
     return (
         <>
             <h1>To do list</h1>
@@ -34,6 +40,9 @@ function App() {
                         todo={ todo }
                         onCompletedChange={ () => { 
                             toggleCompletedTodo(todo.text) 
+                        }}
+                        onDelete={ () => {
+                            onDelete(todo.text)
                         }}
                     />
                 )) }
